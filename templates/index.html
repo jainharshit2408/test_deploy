@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>
+</head>
+<body>
+    <h2>Diabetes Prediction System</h2>
+    
+    <form action="/predict" method="POST">
+        <label for="highbp">High BP (0/1):</label>
+        <input type="number" name="highbp" required><br><br>
+        
+        <label for="highchol">High Cholesterol (0/1):</label>
+        <input type="number" name="highchol" required><br><br>
+        
+        <label for="bmi">BMI:</label>
+        <input type="number" name="bmi" required><br><br>
+        
+        <label for="heartdiseaseorattack">Heart Disease/Attack (0/1):</label>
+        <input type="number" name="heartdiseaseorattack" required><br><br>
+        
+        <label for="physactivity">Physical Activity (0/1):</label>
+        <input type="number" name="physactivity" required><br><br>
+        
+        <label for="physhlth">Physical Health:</label>
+        <input type="number" name="physhlth" required><br><br>
+        
+        <label for="diffwalk">Difficulty Walking (0/1):</label>
+        <input type="number" name="diffwalk" required><br><br>
+        
+        <label for="sex">Sex (0 for Female, 1 for Male):</label>
+        <input type="number" name="sex" required><br><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" name="age" required><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    
+    <!-- Display the prediction result -->
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
